@@ -65,7 +65,7 @@ public final class DisplayHandler<D extends Display> {
     this.tabTPS.findDisplayConfig(this.user).ifPresent(config -> {
       final D task = this.displayFactory.apply(config);
       final Future<?> future = this.tabTPS.executor()
-        .scheduleAtFixedRate(task, 0L, this.updateRate, TimeUnit.MILLISECONDS);
+        .scheduleAtFixedRate(task, 1L, this.updateRate, TimeUnit.MILLISECONDS);
       this.futurePair = new RunnableFuturePair<>(task, future);
     });
   }

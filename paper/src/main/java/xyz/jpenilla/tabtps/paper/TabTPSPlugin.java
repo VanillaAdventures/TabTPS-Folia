@@ -87,7 +87,7 @@ public final class TabTPSPlugin extends JavaPlugin implements TabTPSPlatform<Pla
     if (this.tabTPS.configManager().pluginSettings().updateChecker()) {
       this.getServer().getGlobalRegionScheduler().runAtFixedRate(this, task -> {
         UpdateChecker.checkVersion(this.getDescription().getVersion()).forEach(this.logger::info);
-      }, 0, 20 * 60 * 60); // Run every hour
+      }, 1, 20 * 60 * 60); // Run every hour
     }
     final Metrics metrics = new Metrics(this, 8458);
   }

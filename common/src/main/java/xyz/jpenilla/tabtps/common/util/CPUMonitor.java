@@ -46,7 +46,7 @@ public final class CPUMonitor {
     final ScheduledThreadPoolExecutor ex = new ScheduledThreadPoolExecutor(1);
     ex.setRemoveOnCancelPolicy(true);
     this.executor = Executors.unconfigurableScheduledExecutorService(ex);
-    this.monitorTask = this.executor.scheduleAtFixedRate(this::recordUsage, 0L, 500L, TimeUnit.MILLISECONDS);
+    this.monitorTask = this.executor.scheduleAtFixedRate(this::recordUsage, 1L, 500L, TimeUnit.MILLISECONDS);
   }
 
   public void shutdown() {
