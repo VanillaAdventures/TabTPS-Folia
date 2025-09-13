@@ -8,7 +8,7 @@ plugins {
 dependencies {
   implementation(projects.tabtpsCommon)
 
-  compileOnly(libs.paperApi)
+  compileOnly(libs.foliaApi)
   implementation(libs.adventurePlatformBukkit)
   implementation(libs.paperLib)
   implementation(libs.bstatsBukkit)
