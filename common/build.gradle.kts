@@ -29,6 +29,7 @@ dependencies {
   api(libs.adventureApi)
   api(libs.adventureSerializerConfigurate4)
   api(libs.adventureTextSerializerLegacy)
+  api(libs.adventureTextSerializerPlain)
   api(libs.adventureTextFeaturePagination)
   api(libs.minimessage)
   api(libs.slf4jApi)
